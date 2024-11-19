@@ -1130,6 +1130,7 @@ export interface SignInWithCustomTokenOptions extends SignInOptions {
    * @since 0.1.0
    */
   token: string;
+  userAccessGroup?: string;
 }
 
 /**
