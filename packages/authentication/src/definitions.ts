@@ -1130,6 +1130,11 @@ export interface SignInWithCustomTokenOptions extends SignInOptions {
    * @since 0.1.0
    */
   token: string;
+  /**
+   * iOS user access group for sharing authentication on iOS keychain between apps and extensions
+   *
+   * @since 6.2.1
+   */
   userAccessGroup?: string;
 }
 

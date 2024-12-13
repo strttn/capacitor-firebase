@@ -345,8 +345,20 @@ public typealias AuthStateChangedObserver = () -> Void
         }
 
         let token = call.getString("token", "")
+        let userAccessGroup = call.getString("userAccessGroup", "")
 
         self.savedCall = call
+
+
+        if userAccessGroup != "" {
+            do {
+                try Auth.auth().useUserAccessGroup("group.com.plusthat.app")
+            } catch let error as NSError {
+                self.handleFailedSignIn(message: "Error changing user access group", error: error)
+                return
+            }
+        }
+
         Auth.auth().signIn(withCustomToken: token) { _, error in
             if let error = error {
                 self.handleFailedSignIn(message: nil, error: error)

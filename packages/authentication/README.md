@@ -1967,9 +1967,10 @@ An interface covering the possible persistence mechanism types.
 
 #### SignInWithCustomTokenOptions
 
-| Prop        | Type                | Description                       | Since |
-| ----------- | ------------------- | --------------------------------- | ----- |
-| **`token`** | <code>string</code> | The custom token to sign in with. | 0.1.0 |
+| Prop                  | Type                | Description                                                                                  | Since |
+| --------------------- | ------------------- | -------------------------------------------------------------------------------------------- | ----- |
+| **`token`**           | <code>string</code> | The custom token to sign in with.                                                            | 0.1.0 |
+| **`userAccessGroup`** | <code>string</code> | iOS user access group for sharing authentication on iOS keychain between apps and extensions | 6.2.1 |
 
 
 #### SignInWithEmailAndPasswordOptions
